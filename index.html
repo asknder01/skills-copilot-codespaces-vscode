@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FootFlix – Stream live and on-demand football matches from the world's top leagues.">
+  <title>FootFlix – Netflix for Football</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════ NAVBAR ══════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__logo">FOOT<span>FLIX</span></div>
+
+    <ul class="navbar__nav" role="list">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Live</a></li>
+      <li><a href="#">Leagues</a></li>
+      <li><a href="#">Teams</a></li>
+      <li><a href="#">Replays</a></li>
+      <li><a href="#">My List</a></li>
+    </ul>
+
+    <div class="navbar__actions">
+      <div class="search-bar" role="search">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search matches, teams, leagues…"
+          aria-label="Search football matches"
+          autocomplete="off"
+        >
+      </div>
+      <div class="btn-profile" role="img" aria-label="User profile">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;background:#e50914;">
+          <circle cx="18" cy="14" r="7" fill="rgba(255,255,255,0.9)"/>
+          <ellipse cx="18" cy="32" rx="12" ry="8" fill="rgba(255,255,255,0.7)"/>
+        </svg>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════ HERO ════════════════════════════════ -->
+  <section id="hero" class="hero" aria-label="Featured match">
+    <!-- Populated by app.js -->
+    <div class="hero__bg">
+      <div class="skeleton" style="width:100%;height:100%;position:absolute;inset:0;"></div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__badge skeleton" style="width:140px;height:28px;"></div>
+      <div class="skeleton" style="width:320px;height:52px;margin:1rem 0 0.5rem;border-radius:4px;"></div>
+      <div class="skeleton" style="width:220px;height:20px;margin-bottom:0.75rem;border-radius:4px;"></div>
+      <div class="skeleton" style="width:380px;height:60px;margin-bottom:1.5rem;border-radius:4px;"></div>
+      <div style="display:flex;gap:0.75rem;">
+        <div class="skeleton" style="width:130px;height:44px;border-radius:4px;"></div>
+        <div class="skeleton" style="width:130px;height:44px;border-radius:4px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ MAIN ════════════════════════════════ -->
+  <main class="main-content" aria-label="Match categories">
+    <div id="categories-container">
+      <!-- Loading skeletons -->
+      <div class="row">
+        <div class="skeleton" style="width:180px;height:24px;margin-bottom:0.75rem;border-radius:4px;"></div>
+        <div style="display:flex;gap:6px;">
+          <div class="skeleton" style="width:240px;height:135px;border-radius:4px;flex-shrink:0;"></div>
+          <div class="skeleton" style="width:240px;height:135px;border-radius:4px;flex-shrink:0;"></div>
+          <div class="skeleton" style="width:240px;height:135px;border-radius:4px;flex-shrink:0;"></div>
+          <div class="skeleton" style="width:240px;height:135px;border-radius:4px;flex-shrink:0;"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════ FOOTER ══════════════════════════════ -->
+  <footer role="contentinfo">
+    <nav class="footer__links" aria-label="Footer navigation">
+      <a href="#">FAQ</a>
+      <a href="#">Help Centre</a>
+      <a href="#">Account</a>
+      <a href="#">Privacy</a>
+      <a href="#">Cookie Preferences</a>
+      <a href="#">Corporate Information</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Contact Us</a>
+    </nav>
+    <div class="footer__bottom">
+      <span class="footer__logo">FOOT<span>FLIX</span></span>
+      <span>&copy; 2025 FootFlix. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════ MODAL ═══════════════════════════════ -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Match details">
+    <div id="modal" class="modal">
+      <!-- Populated by app.js when a match is opened -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
